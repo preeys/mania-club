@@ -1,0 +1,474 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/****************************************************************************************/
+/* 0. VARIAVEIS   */
+/* 1. ESTILOS GERAIS   */
+/* 2. MENU   */
+/* 3. HEADER   */
+/* 4. SOBRE   */
+/* 5. PROJETOS   */
+/* 6. COLEÇAO   */
+/* 7. ROADMAP   */
+/* 8. SAIR   */
+/* 9. CONECTAR METAMASK   */
+/* 10. NEWLASTER   */
+/* 11. FOOTER   */
+
+
+/***************************************************************************************/
+/* 0. VARIAVEIS   */
+/***************************************************************************************/
+.ola {
+  font-size: 0.8rem;
+  color: green;
+}
+
+/***************************************************************************************/
+/* 1. ESTILOS GERAIS   */
+/***************************************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #201b2c;
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  background-color: #00ff88;
+  height: 2px;
+  width: 140px;
+  margin: 20px auto;
+}
+
+p {
+  line-height: 21.82px;
+  padding: 0 10px;
+}
+
+.section__titulo {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/***************************************************************************************/
+/* 2. MENU   */
+/***************************************************************************************/
+.logo {
+  font-size: 2rem;
+  font-family: Verdana;
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+.menu-bg {
+  background-color: #201b1c;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0px auto;
+}
+
+.menu__logo {
+  margin: 10px;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.nav__link {
+  padding: 20px 10px;
+  color: #f5f5f5;
+}
+
+/***************************************************************************************/
+/* 3. HEADER   */
+/***************************************************************************************/
+
+.intro {
+  font-weight: bold;
+  font-size: 1,8rem;
+  text-align: center;
+  margin: 0px auto;
+  padding: 25px 0;
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+/***************************************************************************************/
+/* 4. SOBRE   */
+/***************************************************************************************/
+
+.somos {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+}
+
+.somos-c {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.somos-c__texto {
+  flex: 6 1 160px;
+}
+/*
+.somos-c__img {
+  flex: 1 1 350px;
+}
+*/
+
+/***************************************************************************************/
+/* 5. PROJETOS   */
+/***************************************************************************************/
+
+.projetos {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #f5f5f5;
+}
+
+.projetos-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projeto {
+  width: 280px;
+  margin: 0 20px;
+}
+
+.projeto__titulo {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px 0 5px 0;
+}
+
+/***************************************************************************************/
+/* 6. COLEÇAO   */
+/***************************************************************************************/
+
+.colecoes {
+  background-color: #201b2c;
+  color: #f5f5f5;
+}
+
+.colecoes-c {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colecao {
+  width: 290px;
+  margin: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #00ff88;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+  background: #2f2841;
+}
+
+.colecao__titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.colecao__preco {
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+.colecao__preco sup {
+  position: relative;
+  font-size: 1.8rem;
+  top: -10px;
+  font-weight: bold;
+}
+
+.colecao__divisor {
+  width: 20px;
+  margin: 5px auto;
+}
+
+.colecao-lista {
+  max-width: 195px;
+  margin: 0 auto;
+}
+
+.colecao-lista__item {
+  margin: 10px 0;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  font-family: Georgia;
+  line-height: 21.82px;
+}
+
+.colecao__btn-comprar {
+  display: block;
+  max-width: 180px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px auto;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid;
+  border-color: #00ff88;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+  color: #00ff88;
+}
+
+
+/***************************************************************************************/
+/* 7. ROADMAP   */
+/***************************************************************************************/
+
+.mapinha {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: red;
+}
+
+.roadmaps {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #f5f5f5;
+}
+
+.roadmap {
+  max-width: 240px;
+  margin: 10px;
+}
+
+.roadmap__titulo {
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.roadmap__titulo::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.roadmap:nth-of-type(1) .roadmap__titulo::before {
+  background: green;
+}
+.roadmap:nth-of-type(2) .roadmap__titulo::before {
+  background: yellow;
+}
+.roadmap:nth-of-type(3) .roadmap__titulo::before {
+  background: red;
+}
+.roadmap:nth-of-type(4) .roadmap__titulo::before {
+  background: red;
+}
+.roadmap:nth-of-type(5) .roadmap__titulo::before {
+  background: red;
+}
+.roadmap:nth-of-type(6) .roadmap__titulo::before {
+  background: red;
+}
+
+@media (max-width: 800px) {
+  
+  .roadmap {
+    max-width: 220px;
+  }
+}
+
+/***************************************************************************************/
+/* 8. SAIR   */
+/***************************************************************************************/
+
+.btn-sair {
+  background-color: red;
+  margin: 0px 10px;
+  border-radius: 6px;
+}
+
+
+/***************************************************************************************/
+/* 9. CONECTAR METAMASK   */
+/***************************************************************************************/
+
+.btn-conect {
+  background-color: #00ff88;
+  margin: 0px 10px;
+  border-radius: 6px;
+}
+
+/***************************************************************************************/
+/* 10. NEWLASTER   */
+/***************************************************************************************/
+
+.newsletter {
+  background: #2f2841;
+}
+
+.newsletter-c {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter-info {
+  flex: 1 1 260px;
+  padding-left: 10px;
+}
+
+.newsletter-info__titulo {
+  font-size: 2.62rem;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+.newsletter-info__descricao {
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+.newsletter-form {
+  flex: 2 1 260px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter-form__input {
+  flex: 3 1 260px;
+  font-size: 1.25rem;
+  width: 325px;
+  color: black;
+  font-style: italic;
+  font-family: Georgia;
+  border: 10px solid;
+  border-color: #00ff88;
+  padding: 10px;
+  margin: 0;
+  border-radius: 0px;
+}
+
+.newsletter-form__submit {
+  flex: 1 1 260px;
+  width: 192px;
+  font-family: Georgia;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #00ff88;
+  color: black;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+}
+
+/***************************************************************************************/
+/* 11. FOOTER   */
+/***************************************************************************************/
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #f5f5f5;
+  padding: 55px calc((100% - 960px) / 2);
+}
+
+.footer__link, .footer__link-2, .footer__copyrigth {
+  padding-left: 10px
+  padding-right: 10px;
+  color: #00ff88;
+}
+
+.games {
+  background-color: #201b2c;
+  color: #f5f5f5;
+}
+
+.games-c {
+max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game {
+width: 290px;
+  margin: 10px;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #00ff88;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+  background: #2f2841;
+}
+
+.game-info__titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.btn-play {
+  display: block;
+  font-size: 1.4rem;
+  margin: 15px auto;
+  padding: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid;
+  border-color: #00ff88;
+  border-radius: 5px;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+  color: #00ff88;
+  background-color: #2f2841;
+}

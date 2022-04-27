@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="in">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Mania</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="index.html">CryptoMania club</a>
+      </nav>
+    </header>
+    <div class="main-login">
+      <div class="left-login">
+        <h2>faça o login<br>entre para o clube</h2>
+        <img src="imagens/login.svg" class="left-login-img" alt="hello">
+      </div>
+      <div class="rigth-login">
+        <div class="card-login">
+          
+          <h1>CADASTRO</h1>
+          
+          <div id="msgSuccess"></div>
+          <div id="msgError"></div>
+          
+          <div class="textfield">
+            <label id="labelUsuario" for="usuario">Nome</label>
+            <input type="text" name="name" placeholder="Nome" id="login">
+          </div>
+          
+          <div class="textfield">
+            <label id="labelEmail" for="email">Usuario</label>
+            <input type="text" name="email" placeholder="Usuario" id="email">
+          </div>
+          
+          <div class="textfield">
+            <label id="labelSenha" for="senha">Senha</label>
+            <input type="password" name="senha" placeholder="Senha" id="senha">
+          </div>
+          
+          <div class="textfield">
+            <label id="labelConfirmarSenha" for="ConfirmarSenha">Confirmar Senha</label>
+            <input type="password" name="ConfirmarSenha" placeholder="Confirmar Senha" id="ConfirmarSenha">
+          </div>
+          
+          <button type="submit" onclick="cadastrar()" class="btn-login">Confirmar</button>
+        </div>
+        
+      </div>
+    </div>
+    
+    <script>
+      let login = document.querySelector('#login');
+      let labelUsuario = document.querySelector('#labelUsuario');
+      let validUsuario = false
+      
+      let email = document.querySelector('#email');
+      let labelEmail = document.querySelector('#labelEmail');
+      let validEmail = false
+      
+      let senha = document.querySelector('#senha');
+      let labelSenha = document.querySelector('#labelSenha');
+      let validSenha = false
+      
+      let ConfirmarSenha = document.querySelector('#ConfirmarSenha');
+      let labelConfirmarSenha = document.querySelector('#labelConfirmarSenha');
+      let validConfirmarSenha = false
+      
+      let msgSuccess = document.querySelector('#msgSuccess');
+      let msgError = document.querySelector('#msgError');
+    
+      login.addEventListener('keyup', () => {
+        if(login.value.length <= 2){
+          labelUsuario.setAttribute('style', 'color: red;');
+          labelUsuario.innerHTML = 'Usuario *insira no minimo 3 caracteres'
+          validUsuario = false
+         
+        } else {
+          labelUsuario.setAttribute('style', 'color: green;');
+          labelUsuario.innerHTML = 'Nome'
+          validUsuario = true
+        }
+      })
+    
+      email.addEventListener('keyup', () => {
+        if(email.value.length <= 4){
+          labelEmail.setAttribute('style', 'color: red;');
+          labelEmail.innerHTML = 'Usuario *insira no minimo 5 caracteres'
+          validEmail = false
+         
+        } else {
+          labelEmail.setAttribute('style', 'color: green;');
+          labelEmail.innerHTML = 'Usuario'
+          validEmail = true
+        }
+      })
+    
+      senha.addEventListener('keyup', () => {
+        if(senha.value.length <= 5){
+          labelSenha.setAttribute('style', 'color: red;');
+          labelSenha.innerHTML = 'Usuario *insira no minimo 6 caracteres'
+          validSenha = false
+         
+        } else {
+          labelSenha.setAttribute('style', 'color: green;');
+          labelSenha.innerHTML = 'Senha'
+          validSenha = true
+        }
+      })
+      
+      ConfirmarSenha.addEventListener('keyup', () => {
+        if(senha.value != ConfirmarSenha.value){
+          labelConfirmarSenha.setAttribute('style', 'color: red;');
+          labelConfirmarSenha.innerHTML = 'Confirmar Senha *as senhas nao conferem'
+          validConfirmarSenha = false
+         
+        } else {
+          labelConfirmarSenha.setAttribute('style', 'color: green;');
+          labelConfirmarSenha.innerHTML = 'Confirmar Senha'
+          validConfirmarSenha = true
+        }
+      })
+    
+    function cadastrar() {
+      if(validUsuario && validEmail && validSenha && validConfirmarSenha) {
+        let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+        
+        listaUser.push(
+          {
+            nomeCad: login.value,
+            userCad: email.value,
+            senhaCad: senha.value
+          }
+          )
+        localStorage.setItem('listaUser', JSON.stringify(listaUser))
+        
+        msgSuccess.setAttribute('style', 'display: block;')
+        msgSuccess.innerHTML = 'Cadastrando usuário...';
+        msgError.setAttribute('style', 'display: none;')
+        msgError.innerHTML = ''
+        
+        setTimeout(()=>{
+          window.location.href = 'index.html';
+        }, 3000)
+        
+      } else {
+        msgError.setAttribute('style', 'display: block;')
+        msgError.innerHTML = 'Confirme seu cadastro!!';
+        msgSuccess.setAttribute('style', 'display: none;')
+        msgSuccess.innerHTML = ''
+      }
+    }
+      
+    </script>
+
+      
+  </body>
+</html>

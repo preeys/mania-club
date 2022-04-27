@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="in">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Mania</title>
+    <link rel="stylesheet" href="css/logado.css">
+  	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script><!--   SCRIPT LOGIN META  ----->
+    <!--<script src="index.js"></script>-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https: //fonts.googleapis.com/css2? family= Yanone+Kaffeesatz:wght@300 & display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <header>
+      <div class="menu-bg">
+        <div class="menu">
+          <div class="menu__logo">
+            <a class="logo" href="">CryptoMania club
+            <br>
+            <p class="ola"id="logado"></p><!--MENSAGEM OLÁ-->
+            </a>
+          </div><!-- .MENU__LOGO -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li><a href="#somos" class="nav__link">Sobre</a></li>
+              <li><a href="#projetos" class="nav__link">Projetos</a></li>
+              <li><a href="#colecoes" class="nav__link">coleção</a></li>
+              <li><a href="#roadmaps" class="nav__link">RoadMap</a></li>
+              <li><button class="btn-sair" onclick= 'sair()' >Sair</button></li><!--BOTÃO DE SAIR-->
+              <li><button class="btn-conect" id="connectWallet" onclick='connectWallet()'>Conectar Web3</button></li><!--BOTÃO METAMASK-->
+              <div class="carteira" id="wallet_info" hidden>
+                <h1 class="carteira_addres" id="wallet_address"></h1>
+                <h2 class="carteira_balan"> balance: <span id="wallet_balance">Matic</span></h2>
+              </div>
+            </ul><!-- .NAV__LINK -->
+          </nav><!-- .NAV -->
+        </div><!--.MENU -->
+      </div><!--.MENU-BG -->
+      <h2 class="intro">Bem-Vindo ao CRYPTOMANIA CLUB <br />
+        CMC é um clube de NFTs – colecionáveis digitais exclusivos
+        que vivem na blockchain Polygon. Seu NFT também funciona como seu cartão de
+        membro do CRYPTOMANIA Club e concede acesso a benefícios exclusivos para membros, o
+        primeiro dos quais é o acesso a o clube descentralizado,
+        Áreas e vantagens futuras podem ser desbloqueadas pela comunidade por meio da
+        ativação do roteiro. </h2>
+    </header><!-- TOPO DO SITE -->
+    <hr>
+    <section class="somos" id="somos">
+      <h1 class="section__titulo">Sobre</h1>
+      <div class="somos-c">
+        <div class="somos-c__texto">
+          <p>
+            Bem-Vindo ao CryptoMania club,um clube descentralizado que visa recompensar os portadores dos NFTs,e disponibilizar uma divertida experiência ao usuário entre games P2E a divertidas coleções de NFTs...
+            <br>
+            Visando uma trajetória ao longo prazo,explorando o universo da BLOCKCHAIN...
+          </p>
+          <br>
+          <p>
+          <h1 class="somos-c__texto2"></h1><!-- ASSOCIAR TIME -->
+          </p>
+        </div><!-- SOMOS-C__TEXTO-->
+        <div class="somos-c__img">
+          <img src="imagens/mundo.svg" alt="Quem Somos" width="300vw">
+        </div><!-- .SOMOS-C__IMG -->
+      </div><!-- .SOMOS-C -->
+    </section><!-- .SOMOS -->
+    <hr>
+    
+    <section class="projetos" id="projetos">
+      <h2 class="section__titulo">Projetos</h2>
+      <div class="projetos-c">
+        <div class="projeto">
+          <img src="imagens/example.gif" alt="projeto" class="projeto__img" width="300vw">
+          <h3 class="projeto__titulo">DogsMania</h3><!-- .PREJETO__TITULO -->
+          <p>DMania é o primeiro projeto Brasileiro de NFTs "colecionáveis" com 500 itens exclusivos que visam recompensar seu portador.<br>Quando você compra um DMania, você não está simplesmente comprando um avatar ou uma obra de arte comprovadamente rara. Você está ganhando acesso a um clube cujos benefícios e ofertas aumentarão com o tempo. Seu DMania pode servir como sua identidade digital e abrir portas digitais para você. </p>
+        </div><!-- .PROJETO -->
+        <div class="projeto">
+          <img src="imagens/programando.svg" alt="projeto" class="projeto__img" width="300vw">
+          <h3 class="projeto__titulo">EM CONSTRUÇÃO</h3><!-- .PREJETO__TITULO -->
+          <p></p>
+        </div><!-- .PROJETO -->
+        <div class="projeto">
+          <img src="imagens/programando.svg" alt="projeto" class="projeto__img" width="300vw">
+          <h3 class="projeto__titulo">EM CONSTRUÇÃO</h3><!-- .PREJETO__TITULO -->
+          <p></p>
+        </div><!-- .PROJETO -->
+      </div><!-- .PROJETOS-C -->
+    </section><!-- .PROJETOS -->
+    <hr>
+    
+    <section class="colecoes" id="colecoes">
+      <h1 class="section__titulo">Coleções</h1>
+      
+      <div class="colecoes-c">
+        <div class="colecao">
+          <h1 class="colecao__titulo">DogMania</h1>
+          <span class="colecao__preco"><sup>5</sup>Matic</span>
+          <hr class="colecao__divisor">
+          <ul class="colecao-lista">
+            <li class="colecao-lista__item">Portadores recebem 30% do valor estabelecido para o MINT de forma ALEATÓRIA</li>
+            <li class="colecao-lista__item">Chave de acesso para Staking</li>
+            <li class="colecao-lista__item">Mais em breve...</li>
+          </ul><!-- .COLECAO__LISTA-->
+          <a href="#" class="colecao__btn-comprar" id="mints">MINT seu NFT</a>
+          
+        </div><!-- .COLECAO -->
+        <div class="colecao">
+          <h1 class="colecao__titulo">EM BREVE</h1>
+          <span class="colecao__preco"><sup></sup></span>
+          <hr class="colecao__divisor">
+          <ul class="colecao-lista">
+            <li class="colecao-lista__item">NOVAS COLEÇÕES MAIS RECOMPENSAS...</li>
+            <li class="colecao-lista__item"></li>
+            <li class="colecao-lista__item"></li>
+          </ul><!-- .COLECAO__LISTA-->
+          <a href="#" class="colecao__btn-comprar">EM BREVE</a>
+          
+        </div><!-- .COLECAO -->
+        <div class="colecao">
+          <h1 class="colecao__titulo">EM BREVE</h1>
+          <span class="colecao__preco"><sup></sup></span>
+          <hr class="colecao__divisor">
+          <ul class="colecao-lista">
+            <li class="colecao-lista__item">NOVAS COLEÇÕES COM MAIS RECOMPENSAS...</li>
+            <li class="colecao-lista__item"></li>
+            <li class="colecao-lista__item"></li>
+          </ul><!-- .COLECAO__LISTA-->
+          <a href="#" class="colecao__btn-comprar">EM BREVE</a>
+          
+        </div><!-- .COLECAO -->
+        
+      </div><!-- .COLECOES-C-->
+      
+    </section><!-- .COLECOES -->
+    
+    <hr>
+    
+    <!-- *************************OBSERVAR TESTE************************************* -->
+    <section class="games" id="games" hidden>
+      <h1 class="section__titulo">Fliperama</h1>
+      
+      <div class="games-c">
+        <div class="game">
+          <h1 class="game-info__titulo">Games em breve</h1>
+          <hr class="colecao__divisor">
+          <p>breve games P2E disponivel para a comunidade</p>
+          <button class="btn-play" id="Play-1">Breve</button>
+        </div><!-- .GAME -->
+      </div><!-- .GAMES-C -->
+      
+      <div class="games-c">
+        <div class="game">
+          <h1 class="game-info__titulo">Games em breve</h1>
+          <hr class="colecao__divisor">
+          <p>breve games P2E disponivel para a comunidade</p>
+          <button class="btn-play">Breve</button>
+        </div><!-- .GAME -->
+      </div><!-- .GAMES-C -->
+      
+      <div class="games-c">
+        <div class="game">
+          <h1 class="game-info__titulo">Games em breve</h1>
+          <hr class="colecao__divisor">
+          <p>breve games P2E disponivel para a comunidade</p>
+          <button class="btn-play">Breve</button>
+        </div><!-- .GAME -->
+      </div><!-- .GAMES-C -->
+      
+      <hr>
+      
+    </section><!-- .GAMES -->
+<!-- ********************  FIM SECTION TESTE  *********************************** -->
+    
+    <section class="mapinha">
+      <h1 class="mapinha">RoadMap</h1>
+    </section>
+    <section class="roadmaps" id="roadmaps">
+      
+      
+      <div class="roadmap">
+        <h1 class="roadmap__titulo"> Q1 2022</h1>
+        <p class="roadmap__descricao">Lançamento oficial da homepage...</p>
+      </div><!-- ROADMAP -->
+      
+      <div class="roadmap">
+        <h1 class="roadmap__titulo">Q2 2022</h1>
+        <p class="roadmap__descricao">Criar comunidade,buscar novos membros para a equipe...</p>
+      </div><!-- ROADMAP -->
+      
+      <div class="roadmap">
+        <h1 class="roadmap__titulo">Q3 2022</h1>
+        <p class="roadmap__descricao">Novas colecoes de nfts com recompensas aos seus proprietarios</p>
+      </div><!-- ROADMAP -->
+      
+      <div class="roadmap">
+        <h1 class="roadmap__titulo">Q4 2022</h1>
+        <p class="roadmap__descricao">Criação do token de governança</p>
+      </div><!-- ROADMAP -->
+      
+      <div class="roadmap">
+        <h1 class="roadmap__titulo">Q4 2022</h1>
+        <p class="roadmap__descricao">Staking de NFTs</p>
+      </div><!-- ROADMAP -->
+      
+      <div class="roadmap">
+        <h1 class="roadmap__titulo">Q1/2 2023</h1>
+        <p class="roadmap__descricao">mini-games P2E para a comunidade</p>
+      </div><!-- ROADMAP -->
+      
+    </section><!-- ROADMAPS -->
+    
+<section class="mapinha">
+      <h1 class="mapinha">2023<br>...</h1>
+    </section>
+    
+    <hr>
+    
+    
+    <section class="newsletter">
+      <div class="newsletter-c">
+        <div class="newsletter-info">
+          <h2 class="newsletter-info__titulo">NEWSLETTER</h2>
+          <p class="newsletter-info__descricao">envie seu e-mail e fique por dentro <br> das novidades</p>
+        </div><!-- .NEWSLETTER-info -->
+        <form action="" class="newsletter-form">
+          <input type="text" placeholder="Seu-email" class="newsletter-form__input">
+          <button type="submit" class="newsletter-form__submit">enviar</button>
+          
+        </form><!-- .NEWSLETTER-FOMR -->
+        
+      </div><!-- .NEWSLETTER-C -->
+    </section><!-- .NEWSLETTER -->
+    
+    <footer class="footer">
+      <a href="#" class="footer__copyrigth">cryptomania.coorp</p>
+      <a href="https://t.me/MadDogsPetsClub" class="footer__link">junte-se ao telegram</a>
+      <a href="https://storyset.com/web" class="footer__link-2">Web illustrations by Storyset</a>
+    </footer>
+<!----------------------------   SCRIPT DO MINT  -------------------------------------->
+
+    <script type="text/javascript">
+var account = null;
+var contract = null;
+
+const ABI =[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_initBaseURI",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_initNotRevealedUri",
+				"type": "string"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "approved",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "approved",
+				"type": "bool"
+			}
+		],
+		"name": "ApprovalForAll",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "mint",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_state",
+				"type": "bool"
+			}
+		],
+		"name": "pause",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "reveal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "safeTransferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes",
+				"name": "_data",
+				"type": "bytes"
+			}
+		],
+		"name": "safeTransferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "approved",
+				"type": "bool"
+			}
+		],
+		"name": "setApprovalForAll",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_newBaseExtension",
+				"type": "string"
+			}
+		],
+		"name": "setBaseExtension",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_newBaseURI",
+				"type": "string"
+			}
+		],
+		"name": "setBaseURI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_newCost",
+				"type": "uint256"
+			}
+		],
+		"name": "setCost",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_notRevealedURI",
+				"type": "string"
+			}
+		],
+		"name": "setNotRevealedURI",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdraw",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "baseExtension",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "cost",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "getApproved",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "operator",
+				"type": "address"
+			}
+		],
+		"name": "isApprovedForAll",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "notRevealedUri",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "ownerOf",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "paused",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_mod",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_seed",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_salt",
+				"type": "uint256"
+			}
+		],
+		"name": "randomNum",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "revealed",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes4",
+				"name": "interfaceId",
+				"type": "bytes4"
+			}
+		],
+		"name": "supportsInterface",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenOfOwnerByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "WalletOfOwner",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+const ADDRESS = "0x70AEFF83Ddc0450F9bfA6e8a0fAbfc82E0B85214";//CONTRATO )//////////
+
+  (async () => {
+    document.getElementById('connectWallet').onclick =() => {
+      window.location.reload()
+    };
+    if (window.ethereum) {
+    await window.ethereum.send('eth_requestAccounts');
+    window.web3 = new Web3(window.ethereum);
+    
+    var accounts = await web3.eth.getAccounts();
+    account = accounts[0];
+    
+    document.getElementById('connectWallet').innerHTML = 'conectado';
+    
+    document.getElementById('games').hidden=false
+    document.getElementById('wallet_address').hidden=false
+    document.getElementById('wallet_balance').hidden=false
+    
+    
+    contract = new web3.eth.Contract(ABI,ADDRESS);
+    document.getElementById('mints').onclick =() => {
+      contract.methods.mint().send({from:account,value:"5000000000000000000"})
+    }
+    
+  }
+}) ();
+
+    </script>  <!---------------- FIM SCRIPT MINT -------------------------------------->
+    
+<!------------------------------ SCRIPT START GAME ------------------------------------->
+    <script>
+      document.getElementById("Play-1").onclick =() => {
+        alert('em construçao')
+        window.location.href = '#'
+      }
+    </script>  <!-------------  FIM SCRIPT START GAME ---------------------------------->
+    
+    <script>
+    
+    if(localStorage.getItem('token') == null){
+      alert('Voce precisa estar logado para acessar esta pagina!');
+      window.location.href = 'index.html';
+    }
+    let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+    let logado = document.querySelector('#logado');
+    logado.innerHTML = `Olá ${userLogado.nome}`;
+    
+    function sair() {
+      localStorage.removeItem('token');
+      localStorage.removeItem('userLogado');
+      window.location.href = 'index.html';
+    }
+    </script>
+  
+  </body>
+</html>
