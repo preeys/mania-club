@@ -32,7 +32,7 @@
             <label id="labelpass" for="senha">Senha</label>
             <input type="password" name="senha" placeholder="Senha" id="senha">
           </div>
-          <button type="submit" onclick="logar()" class="btn-login">login</button>
+          <button type="submit" onclick='logar()' class="btn-login">login</button>
           <p class="conta">Não tem conta ?
           <a class="cadastro" href="cadastro.html">Cadastre-se</a>
           </p>
@@ -65,10 +65,10 @@
               }
             }
           })
-          <--!if(login.value == false && senha.value == false) {
+          if(login.value == false && senha.value == false) {
             alert('Cadastre-se!!')
             window.location.href = 'cadastro.html'
-          }-->
+          }
           if(login.value == userValid.user && senha.value == userValid.senha) {
             window.location.href = 'logado.html'
             let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
